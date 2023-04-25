@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Text from '../components/atoms/text/Index'
+import Icon from '../components/atoms/Icon/Index'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -48,6 +50,12 @@ export default function Home() {
             height={37}
             priority
           />
+          <div>
+            <Icon name="github" color={'red'} size={'small'} />
+          </div>
+          <div>
+            <Text text="ooooppppaaa" size="large" color="yellow" fontFamily="sansSerif" className={undefined} as={undefined} />
+          </div>
         </div>
 
         <div className={styles.grid}>
@@ -57,6 +65,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+
             <h2 className={inter.className}>
               Docs <span>-&gt;</span>
             </h2>
