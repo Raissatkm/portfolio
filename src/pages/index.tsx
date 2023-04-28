@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Text from '../components/atoms/text/Index'
 import Icon from '../components/atoms/Icon/Index'
+import GradientBorder from '../components/atoms/Dash/Index'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,9 +52,10 @@ export default function Home() {
             priority
           />
           <div>
-            <Icon name="github" color={'red'} size={'small'} />
+            <Icon name="github" color={'red'} size={'large'} />
           </div>
           <div>
+            <GradientBorder children={undefined} />
             <Text text="ooooppppaaa" size="large" color="yellow" fontFamily="sansSerif" className={undefined} as={undefined} />
           </div>
         </div>
