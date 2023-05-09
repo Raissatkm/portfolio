@@ -1,15 +1,9 @@
-import { IconColor, IconSize, StyledIcon } from './Styles';
+import { IconType } from 'react-icons';
+import { IconProps } from './interfaces';
+import { StyledIcon } from './styles';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
-type IconType = keyof typeof icons;
-
-interface IconProps {
-  name: IconType;
-  size?: keyof typeof IconSize;
-  color?: keyof typeof IconColor;
-}
-
-const icons = {
+const icons: { [key: string]: IconType } = {
   email: FaEnvelope,
   phone: FaPhone,
   location: FaMapMarkerAlt,
@@ -24,7 +18,7 @@ const Icon = ({ name, size = 'medium', color = 'black' }: IconProps) => {
   if (!Icon) return null;
 
   return (
-    <StyledIcon size={size} color={color}>
+    <StyledIcon name={name} size={size} color={color}>
       <Icon />
     </StyledIcon>
   );

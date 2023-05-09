@@ -2,9 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Text from '../components/atoms/text/Index'
-import Icon from '../components/atoms/Icon/Index'
-import GradientBorder from '../components/atoms/Dash/Index'
+import Icon from '../components/atoms/icon'
+import Button from '../components/molecules/button/index'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -52,11 +51,10 @@ export default function Home() {
             priority
           />
           <div>
-            <Icon name="github" color={'red'} size={'large'} />
+            <Button size='small'>aqui</Button>
           </div>
           <div>
-            <GradientBorder children={undefined} />
-            <Text text="ooooppppaaa" size="large" color="yellow" fontFamily="sansSerif" className={undefined} as={undefined} />
+            <Icon name={'instagram'} color={'red'} size={'large'} />
           </div>
         </div>
 

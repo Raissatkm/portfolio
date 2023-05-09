@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IconProps } from './interfaces';
 
 export const IconSize = {
   small: '16px',
@@ -13,11 +14,6 @@ export const IconColor = {
   white: '#FFFFFF',
   black: '#111111',
 };
-
-export interface IconProps {
-  color: keyof typeof IconColor;
-  size: keyof typeof IconSize;
-}
 
 export const StyledIcon = styled.span<IconProps>`
   display: inline-flex;
