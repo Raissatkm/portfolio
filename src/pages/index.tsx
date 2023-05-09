@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Text from "@/components/atoms/Text"
 
 import { GlobalStyles } from '@/global';
-import  { selectTheme } from '@/global/theme'
+import { selectTheme } from '@/global/theme'
 
 export default function Home() {
   const theme = selectTheme({
@@ -23,7 +23,6 @@ export default function Home() {
       <Text type="Body 1" color='BACKGROUND'>Body 1</Text>
       <Text type="Body 2" color='ACCENTED_DARK'>Body 2</Text>
       <Text type="BUTTON" color='ACCENTED'>BUTTON</Text>
-      <Text>BUTTON</Text>
       <GlobalStyles />
     </ThemeProvider>
   )
