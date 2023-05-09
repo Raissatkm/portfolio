@@ -1,4 +1,5 @@
 import Image from '../components/atoms/Image'
+import Navbar from '../components/organisms/Navbar'
 
 export default function Home() {
   return (
@@ -10,4 +11,5 @@ export default function Home() {
       hasBorderColor='SECONDARY'
       />
   )
+
 }
