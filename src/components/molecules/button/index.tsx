@@ -1,17 +1,11 @@
 import styled from 'styled-components';
+import { ButtonProps } from './interfaces';
 import {
   primaryButtonStyles,
   smallButtonStyles,
   mediumButtonStyles,
   largeButtonStyles,
 } from './styles';
-
-interface ButtonProps {
-  size?: 'small' | 'medium' | 'large';
-  primary?: boolean;
-  onClick?: () => void;
-  disabled?: boolean;
-}
 
 const Button = styled.button<ButtonProps>`
   ${(props) => {
