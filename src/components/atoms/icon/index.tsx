@@ -12,13 +12,13 @@ const icons: { [key: string]: IconType } = {
   instagram: FaInstagram
 };
 
-const Icon = ({ name, size = 'medium', color = 'black' }: IconProps) => {
+const Icon = ({ name, ...props }: IconProps) => {
   const Icon = icons[name];
 
   if (!Icon) return null;
 
   return (
-    <StyledIcon name={name} size={size} color={color}>
+    <StyledIcon name={name} {...props}>
       <Icon />
     </StyledIcon>
   );

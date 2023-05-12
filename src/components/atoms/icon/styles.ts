@@ -2,14 +2,12 @@ import styled from 'styled-components';
 import { IconProps } from './interfaces';
 
 export const IconSize = {
-  small: '16px',
-  medium: '24px',
-  large: '32px',
+  small: '1rem',
+  medium: '2rem',
+  large: '4rem',
 };
 
 export const IconColor = {
-  red: '#FF4136',
-  blue: '#0074D9',
   green: '#2ECC40',
   white: '#FFFFFF',
   black: '#111111',
