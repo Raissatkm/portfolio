@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { ButtonProps } from './interfaces';
 import {
-  primaryButtonStyles,
   smallButtonStyles,
   mediumButtonStyles,
   largeButtonStyles,
@@ -9,9 +8,6 @@ import {
 
 const Button = styled.button<ButtonProps>`
   ${(props) => {
-    if (props.primary) {
-      return primaryButtonStyles;
-    }
     switch (props.size) {
       case 'small':
         return smallButtonStyles;
@@ -19,8 +15,6 @@ const Button = styled.button<ButtonProps>`
         return mediumButtonStyles;
       case 'large':
         return largeButtonStyles;
-      default:
-        return mediumButtonStyles;
     }
   }}
 `;
