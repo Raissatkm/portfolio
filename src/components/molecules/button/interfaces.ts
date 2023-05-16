@@ -1,6 +1,9 @@
-export interface ButtonProps {
+import {  IconInterface } from '../../atoms/icon/interfaces'
+
+export interface ButtonInterface {
   size?: 'small' | 'medium' | 'large';
-  primary?: boolean;
-  onClick?: () => void;
-  disabled?: boolean;
+  onClick: () => void;
+  isDisabled?: boolean;
+  label?: string;
+  IconProps?: IconInterface;
 }
