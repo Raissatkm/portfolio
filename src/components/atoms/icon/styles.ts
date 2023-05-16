@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IconProps } from './interfaces';
+import { IconInterface } from './interfaces';
 
 export const IconSize = {
   small: '1rem',
@@ -13,7 +13,7 @@ export const IconColor = {
   black: '#111111',
 };
 
-export const StyledIcon = styled.span<IconProps>`
+export const StyledIcon = styled.span<IconInterface>`
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { IconProps } from './interfaces';
+import { IconInterface } from './interfaces';
 import { StyledIcon } from './styles';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
@@ -12,7 +12,7 @@ const icons: { [key: string]: IconType } = {
   instagram: FaInstagram
 };
 
-const Icon = ({ name, ...props }: IconProps) => {
+const Icon = ({ name, ...props }: IconInterface) => {
   const Icon = icons[name];
 
   if (!Icon) return null;

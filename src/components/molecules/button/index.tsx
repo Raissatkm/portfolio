@@ -1,22 +1,12 @@
-import styled from 'styled-components';
-import { ButtonProps } from './interfaces';
-import {
-  smallButtonStyles,
-  mediumButtonStyles,
-  largeButtonStyles,
-} from './styles';
+import * as Style from './styles';
 
-const Button = styled.button<ButtonProps>`
-  ${(props) => {
-    switch (props.size) {
-      case 'small':
-        return smallButtonStyles;
-      case 'medium':
-        return mediumButtonStyles;
-      case 'large':
-        return largeButtonStyles;
-    }
-  }}
-`;
+import { ButtonInterface } from './interfaces';
 
-export default Button;
+export default function Button (props: ButtonInterface) {
+    const { label, IconProps } = props;
+    return (
+      <Style.ButtonComponent {...props}>
+        {IconProps && (<Style.IconComponent  {...IconProps} color='white' size="medium"/>)}
+        {label && (<Style.TextComponent type='BUTTON' >{label}</Style.TextComponent>)}
+      </Style.ButtonComponent>)
+}

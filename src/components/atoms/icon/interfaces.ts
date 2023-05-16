@@ -1,6 +1,6 @@
 import { IconSize, IconColor } from "./styles";
 
-export interface IconProps {
+export interface IconInterface {
   name: string;
   size: keyof typeof IconSize;
   color: keyof typeof IconColor;
