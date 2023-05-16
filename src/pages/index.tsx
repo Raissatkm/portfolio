@@ -1,13 +1,27 @@
-import Image from '../components/atoms/Image'
+import { ThemeProvider } from 'styled-components';
+
+import Text from "@/components/atoms/Text"
+
+import { GlobalStyles } from '@/global';
+import { selectTheme } from '@/global/theme'
+import Button from '@/components/molecules/Button';
 
 export default function Home() {
+  const theme = selectTheme({
+    color: 'default',
+    font: 'default',
+  });
   return (
-    <Image 
-      src='https://avatars.githubusercontent.com/u/106279151?v=4'
-      alt='gdsdsghsf'
-      size='large'
-      isCircle={true}
-      hasBorderColor='SECONDARY'
+    <><ThemeProvider theme={theme}>
+      <Button onClick={() => {}} 
+        size='small'
+        IconProps={{
+          color: 'green',
+          name: 'github',
+          size: 'small'
+        }}
       />
+      <GlobalStyles />
+    </ThemeProvider></>
   )
 }
