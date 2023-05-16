@@ -1,13 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled  from 'styled-components';
 
-import { NavbarInteface } from './interfaces';
+import { NavbarInterface } from './interfaces';
 
 
 
-export const NavbarComponent = styled.Navbar<NavbarInteface>`
-  ${({ }) =>
-     
-    `
-      width: ${()}
-    `};
-`;
+export const NavbarComponent = styled.nav<NavbarInterface>``;

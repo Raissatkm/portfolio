@@ -1,10 +1,10 @@
 import React from "react";
 
-import { NavbarIntefance } from './interfaces';
+import { NavbarInterface } from './interfaces';
 
 import { NavbarComponent} from './styles';
 
-function Navbar(props: NavbarIntefance) {
+function Navbar(props: NavbarInterface) {
     return <NavbarComponent {...props} />
 
 
