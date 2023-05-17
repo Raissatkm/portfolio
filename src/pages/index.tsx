@@ -4,7 +4,8 @@ import Text from "@/components/atoms/Text"
 
 import { GlobalStyles } from '@/global';
 import { selectTheme } from '@/global/theme'
-import Button from '@/components/molecules/Button';
+import Button from '../components/molecules/button/index';
+import HomeTemplate from '@/components/templates/home';
 
 export default function Home() {
   const theme = selectTheme({
@@ -13,7 +14,8 @@ export default function Home() {
   });
   return (
     <><ThemeProvider theme={theme}>
-      <Button onClick={() => {}} 
+      <HomeTemplate />
+      <Button onClick={() => { }}
         size='small'
         IconProps={{
           color: 'green',
