@@ -1,15 +1,13 @@
-import React, { FC } from 'react';
-import { Props } from './interfaces';
-import { Container, Header, Main, Footer } from './styles';
+import React from 'react';
+import * as Style from './styles';
+import { HomeInterface } from './interfaces';
 
-const HomeTemplate: FC<Props> = ({ children }) => {
+export default function HomeTemplate({ ButtonProps, ImageProps, TextProps }: HomeInterface) {
   return (
-    <Container>
-      <Header>{ }</Header>
-      <Main>{children}</Main>
-      <Footer>{ }</Footer>
-    </Container>
+    <Style.HomeComponent>
+      {ButtonProps && <Style.ButtonComponent {...ButtonProps} />}
+      {ImageProps && <Style.ImageComponent {...ImageProps} />}
+      {TextProps && <Style.TextComponent {...TextProps} />}
+    </Style.HomeComponent>
   );
-};
-
-export default HomeTemplate;
+}
