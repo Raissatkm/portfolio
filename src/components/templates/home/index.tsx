@@ -2,12 +2,16 @@ import React from 'react';
 import * as Style from './styles';
 import { HomeInterface } from './interfaces';
 
-export default function HomeTemplate({ ButtonProps, ImageProps, TextProps }: HomeInterface) {
+const HomeTemplate: React.FC<HomeInterface> = ({ ButtonProps, ImageProps, TextProps }) => {
   return (
-    <Style.HomeComponent>
-      {ButtonProps && <Style.ButtonComponent {...ButtonProps} />}
-      {ImageProps && <Style.ImageComponent {...ImageProps} />}
-      {TextProps && <Style.TextComponent {...TextProps} />}
-    </Style.HomeComponent>
+    <Style.Container>
+      <Style.Logo>{ }</Style.Logo>
+      <Style.Navbar>{ }</Style.Navbar>
+      <Style.Main>{ }</Style.Main>
+      <Style.SocialMedia>{ }</Style.SocialMedia>
+      <Style.ImageContainer>{ }</Style.ImageContainer>
+    </Style.Container>
   );
-}
+};
+
+export default HomeTemplate;
