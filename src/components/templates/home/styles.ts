@@ -24,5 +24,3 @@ export const ImageComponent = styled.img``;
 export const ButtonComponent = styled.button``;
 
 export const SocialMedia = styled.div``;
-
-export const ImageContainer = styled.div``;
