@@ -1,15 +1,17 @@
-import React, { FC } from 'react';
-import { Props } from './interfaces';
-import { Container, Header, Main, Footer } from './styles';
+import React from 'react';
+import * as Style from './styles';
+import { HomeInterface } from './interfaces';
 
-const HomeTemplate: FC<Props> = ({ children }) => {
+export default function HomeTemplate(props: HomeInterface) {
   return (
-    <Container>
-      <Header>{ }</Header>
-      <Main>{children}</Main>
-      <Footer>{ }</Footer>
-    </Container>
+    <Style.Container>
+      <Style.Logo />
+      <Style.Navbar />
+      <Style.Main />
+      <Style.ImageComponent {...props.ImageProps}
+        src='https://avatars.githubusercontent.com/u/106279151?v=4'
+        alt='image'
+      />
+    </Style.Container>
   );
 };
-
-export default HomeTemplate;

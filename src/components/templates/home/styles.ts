@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`  
+export const Container = styled.div`
+
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const Header = styled.header`  
-`;
+export const Logo = styled.div``;
 
-export const Main = styled.main` 
-`;
+export const Navbar = styled.nav``;
 
-export const Footer = styled.footer`
-`;
+export const Main = styled.main``;
+
+export const TextComponent = styled.p``;
+
+export const ImageComponent = styled.img``;
+
+export const ButtonComponent = styled.button``;
+
+export const SocialMedia = styled.div``;
