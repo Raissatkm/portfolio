@@ -23,7 +23,14 @@ export const ButtonComponent = styled.button<ButtonInterface>`
   padding: 0.75rem 1.5rem;
   white-space: nowrap;
   border-radius: 0.25rem;
-  background-color: ${({ theme })=> theme.COLORS.ACCENTED };
+  background-color: ${({ theme, backgroundColor }) => {
+    if (backgroundColor === undefined)
+      return theme.COLORS.ACCENTED;
+    else if (backgroundColor === 'tranparent' )
+      return css`transparent`;
+    else 
+       return theme.COLORS[backgroundColor]
+  }};
   color: ${({ theme })=> theme.COLORS.PRIMARY_LIGHT };
   border: none;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);

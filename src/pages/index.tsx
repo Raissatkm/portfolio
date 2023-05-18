@@ -4,7 +4,7 @@ import Text from "@/components/atoms/Text"
 
 import { GlobalStyles } from '@/global';
 import { selectTheme } from '@/global/theme'
-import Button from '@/components/molecules/Button';
+import Navbar from '@/components/organisms/Navbar';
 
 export default function Home() {
   const theme = selectTheme({
@@ -12,16 +12,24 @@ export default function Home() {
     font: 'default',
   });
   return (
-    <><ThemeProvider theme={theme}>
-      <Button onClick={() => {}} 
-        size='small'
-        IconProps={{
-          color: 'green',
-          name: 'github',
-          size: 'small'
-        }}
-      />
-      <GlobalStyles />
-    </ThemeProvider></>
+      <ThemeProvider theme={theme}>
+        <div style={{ backgroundColor: '#000', width: 2000, height: 2000 }}>
+
+          <Navbar AboutButtonProps={{
+            label: 'Sobre',
+            onClick: () => {},
+          }} ContactButtonProps={{
+            label: 'Contato',
+            onClick: () => {},
+          }} ProjectButtonProps={{
+            label: 'Projeto',
+            onClick: () => {},
+          }} ResumeButtonProps={{
+            label: 'Resumo',
+            onClick: () => {},
+          }}/>
+        </div>
+        <GlobalStyles />
+      </ThemeProvider>
   )
 }
